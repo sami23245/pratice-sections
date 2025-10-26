@@ -1,0 +1,12 @@
+{
+    "1234": {
+        "name": "Ali",
+        "balance": 20000,
+        "type": "savingAccount"
+    },
+    "5678": {
+        "name": "Sara",
+        "balance": 50569.0,
+        "type": "currentAccount"
+    }
+}
