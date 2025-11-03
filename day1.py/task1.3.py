@@ -1,3 +1,5 @@
+
+
 from colorama import Fore,Style
 import json
 import os
@@ -22,7 +24,7 @@ class Data_base:
             a5: {"name": "zoro", "balance": 50000, "type": "currentAccount" , "pin": a5}
         }
         
-        print(a)
+        
     def save_to_file(self, path):
         with open(path, "w") as file:
             json.dump(self.accounts, file, indent=5)
@@ -58,14 +60,14 @@ class login(Data_base):
     def login(self,accounts):
         print(Fore.LIGHTBLUE_EX + "--welcome--")
         print(Style.RESET_ALL)
-        user_input = input("Enter account no: ")
+        
         max_attempts = 3
         attempts = 0
 
         while attempts < max_attempts:
-            acc_no = input("Enter your account number: ")
+            acc_no = input("Enter your account name: ")
 
-            if user_input in accounts:
+            if acc_no in accounts:
                 print(f"✅ {accounts[acc_no]['name']}!")
                 max_attempts2 = 3
                 attempts2 = 0
@@ -122,17 +124,17 @@ class login(Data_base):
                                     break
                             else:
                                 print("Thanks for you Assists")
-                    break
+                                break
                 else:
                     attempts2 += 1
-                print(f"❌ Invalid pin. Attempts left: {max_attempts - attempts}")
+                    print(f"❌ Invalid pin. Attempts left: {max_attempts - attempts}")
 
                 if attempts2 == max_attempts2:
                     print("🚫 Too many failed attempts. Try later.")
-            break
-        else:
-            attempts += 1
-        print(f"❌ Invalid account. Attempts left: {max_attempts - attempts}")
+                break
+            else:
+                attempts += 1
+                print(f"❌ Invalid account. Attempts left: {max_attempts - attempts}")
 
         if attempts == max_attempts:
             print("🚫 Too many failed attempts. Try later.")
