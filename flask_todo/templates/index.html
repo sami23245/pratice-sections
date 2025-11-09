@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My To-Do List</h1>
+<form method="POST">
+    <input type="text" name="task" placeholder="Enter new task">
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+    {% for i, t in enumerate(tasks) %}
+    <li class="{{ 'done' if t.done else '' }}">
+        {{ t.task }}
+        <a href="{{ url_for('toggle', task_id=i) }}">✔</a>
+        <a href="{{ url_for('delete', task_id=i) }}">✖</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
