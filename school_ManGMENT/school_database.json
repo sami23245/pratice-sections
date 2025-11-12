@@ -1,0 +1,125 @@
+{
+    "students": {
+        "Spc23": {
+            "Name": "Ali",
+            "Class": "9th",
+            "Program": "Science",
+            "Condition": "Great",
+            "Schlorship": "Yes on 80%",
+            "Marks": 98,
+            "Attendance": [
+                "Present"
+            ]
+        },
+        "Spc24": {
+            "Name": "Sara",
+            "Class": "12th",
+            "Program": "ICS",
+            "Condition": "Good",
+            "Schlorship": "NO",
+            "Marks": 89
+        },
+        "Spc25": {
+            "Name": "Zoro",
+            "Class": "8th",
+            "Program": "Science",
+            "Condition": "Normal",
+            "Schlorship": "Yes on 45%",
+            "Marks": 56
+        },
+        "Spc26": {
+            "Name": "Samina",
+            "Class": "7th",
+            "Program": "Arts",
+            "Condition": "Bad",
+            "Schlorship": "Yes on 25%",
+            "Marks": 39
+        },
+        "Spc27": {
+            "Name": "Moiz",
+            "Class": "7th",
+            "Program": "Science",
+            "Condition": "Normal",
+            "Schlorship": "No",
+            "Marks": 67
+        },
+        "Spc21": {
+            "Name": "Sami",
+            "Program": "ics",
+            "Marks": 0,
+            "Scholarship": "Not Eligible"
+        },
+        "spc20": {
+            "Name": "sami",
+            "Program": "ics",
+            "Marks": 1,
+            "Scholarship": "Not Eligible"
+        }
+    },
+    "teachers": {
+        "Tec23": {
+            "Name": "Dark king",
+            "Specific_skill": "Computer",
+            "Salary": 54000,
+            "Feedback": "Great",
+            "Class_Teacher": "9th"
+        },
+        "Tec24": {
+            "Name": "Sun God",
+            "Specific_skill": "Math",
+            "Salary": 67000,
+            "Feedback": "Great",
+            "Class_Teacher": "12th"
+        },
+        "Tec25": {
+            "Name": "Red Hair",
+            "Specific_skill": "Bio",
+            "Salary": 78000,
+            "Feedback": "Great",
+            "Class_Teacher": "11th"
+        },
+        "Tec26": {
+            "Name": "Beast King",
+            "Specific_skill": "Arts",
+            "Salary": 34000,
+            "Feedback": "Great",
+            "Class_Teacher": "11th"
+        }
+    },
+    "admin": {
+        "Adm23": {
+            "Name": "Nami",
+            "Role": "IT Spalist",
+            "Salary": 50000,
+            "Incharge": "Regesteration"
+        },
+        "Adm24": {
+            "Name": "Robin",
+            "Role": "Data Sintest",
+            "Salary": 50000,
+            "Incharge": "Data Managment"
+        },
+        "Adm25": {
+            "Name": "Sanji",
+            "Role": "Finance Spalist",
+            "Salary": 50000,
+            "Incharge": "Finance"
+        }
+    },
+    "permissions": {
+        "student": [
+            "view_own_data"
+        ],
+        "teacher": [
+            "view_students",
+            "modify_attendance"
+        ],
+        "admin": [
+            "add_user",
+            "remove_user",
+            "modify_data"
+        ]
+    },
+    "programs": [],
+    "Scholarships": {}
+}

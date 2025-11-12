@@ -1,6 +1,4 @@
-
-
-from colorama import Fore,Style
+import colorama
 import json
 import os
 import random
