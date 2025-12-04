@@ -54,6 +54,12 @@
             "Program": "ics",
             "Marks": 1,
             "Scholarship": "Not Eligible"
+        },
+        "spc31": {
+            "Name": "saban",
+            "Program": "ics",
+            "Marks": 9,
+            "Scholarship": "Not Eligible"
         }
     },
     "teachers": {

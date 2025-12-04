@@ -1,0 +1,18 @@
+{
+     "expense1": "uses less",
+     "expense2": "over prise",
+     "expense3": "not necessery",
+     "expense4": "too cheap",
+     "records": [
+          {
+               "id": 1,
+               "purpose": "nothin",
+               "amount": 3333
+          },
+          {
+               "id": 1,
+               "purpose": "njj",
+               "amount": 3333
+          }
+     ]
+}
