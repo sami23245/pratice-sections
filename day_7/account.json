@@ -3,16 +3,16 @@
      "expense2": "over prise",
      "expense3": "not necessery",
      "expense4": "too cheap",
-     "records": [
+     "record12": [
           {
-               "id": 1,
-               "purpose": "nothin",
-               "amount": 3333
+               "purpose": "buy food",
+               "amount": 200,
+               "remaning ammount": 19800
           },
           {
-               "id": 1,
-               "purpose": "njj",
-               "amount": 3333
+               "purpose": "buy cake",
+               "amount": 700,
+               "remaning ammount": 19100
           }
      ]
 }

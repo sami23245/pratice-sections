@@ -1,4 +1,3 @@
-# import tkinter
 import json
 import os
 import colorama
@@ -14,11 +13,7 @@ class Data_Expencess:
             "expense3": "not necessery",
             "expense4": "too cheap",
         }
-        Id = 0
-        Id = Id + 1
         self.all_expenses = []
-        self.expencess_data[f"records{+ Id}"] = self.all_expenses
-
     def save(self,path):
         with open(path, "w") as f:
             json.dump(self.expencess_data, f, indent=5)
@@ -27,7 +22,7 @@ class Data_Expencess:
         with open(path,'r') as f:
             self.expencess_data = json.load(f)
 class main(Data_Expencess):
-    def ex(self,n):
+    def ex(self,n,Id):
         option2 = 1
         x = 0
         print(Fore.RED + "For make new list for expencess press [1]:")
@@ -62,24 +57,29 @@ class main(Data_Expencess):
                 Total_ammount = Total_ammount - ea
                 print(Fore.RED + f"Your remmaning ammount is [{Total_ammount}]")
                 print(Style.RESET_ALL)
-                last_id = 0
-                if "records" in self.expencess_data['records']:
-                    last_id = self.expencess_data['records']["id"]  # get id of the last record
-                new_id = last_id + 1
 
                 expense_dict = {
-                    "id": new_id,
                     "purpose": e,
-                    "amount": ea
+                    "amount": ea,
+                    "remaning ammount":Total_ammount
                 }
                 self.all_expenses.append(expense_dict)
-            self.expencess_data["records"] = self.all_expenses
+            rac = str(input("Enter any record num to save in format[record123]:"))
+            self.expencess_data[rac] = self.all_expenses
             self.save(path)
         elif(option1 == 2):
-            Id = input("Enter your id:")
-if __name__ == "__main__":
-    # d = Data_Expencess    # create object   
+            self.load(path)
+            rec = str(input("Enter your record num:"))
+            if rec in self.expencess_data:
+                print(self.expencess_data[rec])
+            else:
+                print("ID dose not exit.....")
+        else:
+            print(Fore.RED + "Invalid option.....")
+            print(Style.RESET_ALL)
+if __name__ == "__main__":  
+    # create object   
     m = main()
     m.load(path)
     print(m.load(path))
-    m.ex(n='123')
+    m.ex(n='123',Id=type)
