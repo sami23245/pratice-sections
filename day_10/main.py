@@ -1,6 +1,9 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk as te
+import openpyxl
+import os
+
 root = Tk()
 # root.geometry("444x344")
 root.title("Data Entery Form")
@@ -29,7 +32,19 @@ def submit():
         print(f"Registration Status: {reg_status}")
         print(f"Completed Courses: {course_completed}, Semester: {semester}")
         print("-----------------------------------------------------------")
-
+        filepath = r"C:\Users\Samis\OneDrive\Desktop\learning\pratice-sections\day_10\data_entry_form.xlsx"
+        if not os.path.exists(filepath):
+            workbook = openpyxl.Workbook()
+            sheet = workbook.active
+            sheet.title = "Data Entry"
+            headers = ["First Name", "Last Name", "Title", "Age", "nationality", "Registration Status", "Completed Courses", "Semester"]
+            sheet.append(headers)
+            workbook.save(filepath)
+        workbook = openpyxl.load_workbook(filepath)
+        sheet = workbook["Data Entry"]
+        sheet.append([first_name, last_name, title, age, nacinationaly, reg_status, course_completed, semester])
+        workbook.save(filepath)
+        messagebox.showinfo("Submission Successful", "Your data has been submitted successfully.")
 
     # terms and conditions
 frame = Frame(root)
